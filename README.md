@@ -5,21 +5,21 @@ Feature chosen: "Ability to create “shipments” and assign inventory to the s
 
 Link: https://inventory-sepehr.herokuapp.com/
 
-## How To use
+## Live Run
 The webapp is deployed to Heroku and is live => [Link](https://inventory-sepehr.herokuapp.com/)
 
 ## Local Run
-run git clone
+Clone the Repository
 ```
 git clone https://github.com/sepehrsafa/inventory.git
 ```
 
-install requirements:
+Install the requirements:
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
-run server:
+Run development server:
 ```
 python manage.py runserver
 ```
