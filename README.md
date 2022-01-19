@@ -1,4 +1,4 @@
-# Inventory Management Software
+# Inventory Management Software - Django
 Shopify Backend Developer Intern Challenge - Summer 2022
 
 Feature chosen: "Ability to create “shipments” and assign inventory to the shipment, and adjust inventory appropriately"
