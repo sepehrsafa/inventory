@@ -56,8 +56,9 @@ class ShipmentSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         shipmet = Shipment.objects.create(destination_address=validated_data["destination_address"])
+        if not validated_data['shipmentthrough_set']:
+            raise serializers.ValidationError({"detail": "Shipment MUST have an Item inside"})
         for item in validated_data['shipmentthrough_set']:
-            print(item)
             item_obj = get_object_or_404(Item,pk=item['item']['id'])
             ShipmentThrough.objects.create(shipment=shipmet,item=item_obj,quantity=item['quantity'])
             item_obj.quantity-=item['quantity']
